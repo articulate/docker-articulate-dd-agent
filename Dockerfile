@@ -1,4 +1,4 @@
-FROM datadog/docker-dd-agent:11.0.5140
+FROM datadog/docker-dd-agent:12.3.5172
 
 RUN apt-get update -qq && apt-get -y install wget && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
