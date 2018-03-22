@@ -1,4 +1,4 @@
-FROM datadog/docker-dd-agent:12.6.5223-alpine
+FROM datadog/docker-dd-agent:latest-alpine
 
 RUN apk --no-cache update && apk upgrade && apk add bash curl wget && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
