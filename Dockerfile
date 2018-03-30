@@ -1,6 +1,6 @@
-FROM datadog/docker-dd-agent:latest-alpine
+FROM datadog/docker-dd-agent:12.3.5172
 
-RUN apk --no-cache update && apk upgrade && apk add bash curl wget && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get update -qq && apt-get -y install wget && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN cp /entrypoint.sh /dd-entrypoint.sh
 
