@@ -2,7 +2,7 @@
 # because Datadog APM is not available on alpine based images
 # https://docs.datadoghq.com/tracing/setup/docker/
 
-FROM datadog/docker-dd-agent:12.3.5172
+FROM datadog/docker-dd-agent:latest
 
 RUN apt-get update -qq && apt-get -y install wget && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
